@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <div
+      class="hidden lg:block fixed lg:max-w-[295px] w-full overflow-y-auto h-full bg-white z-[999]"
+      id="sidebarHRIS"
+    >
+      <div class="px-6 py-[50px] gap-y-[50px] flex flex-col">
+        <div class="flex items-center justify-between">
+          <a href="#" class="flex justify-center">
+            <img src="" alt="Ini Logo" />
+          </a>
+          <a href="#" id="toggleCloseSidebar" class="lg:hidden">
+            <svg
+              class="w-6 h-6 text-dark"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="text-sm text-grey">Dashboard</div>
+
+          <a href="" class="active">
+            <img src="" alt="" />
+            User Management
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="text-sm text-grey">Settings</div>
+
+          <a href="" class="nav-link active">
+            <img src="" alt="" />
+            Mat doe
+          </a>
+
+          <a href="#" class="" id="logoutLink">
+            <img src="" alt="" />
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      class="lg:pr-[70px] py-[50px] lg:ml-[320px] xl:ml-[365px] px-4 lg:pl-0"
+    >
+      <a href="#" id="toggleOpenSidebar" class="lg:hidden absolute">
+        <svg
+          class="w-10 h-10 text-dark bg-white rounded-full mx-2 p-2 shadow-xl active:bg-primary active:text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h7"
+          ></path>
+        </svg>
+      </a>
+
+      <!-- Top Section -->
+      <!-- <section class="flex flex-col flex-wrap justify-between gap-6 md:items-center md:flex-row">
+            <div class="flex items-center justify-between gap-4">
+                <a href="#" id="toggleOpenSidebar" class="lg:hidden">
+                    <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7">
+                        </path>
+                    </svg>
+                </a>
+                <div class="text-[32px] font-semibold text-dark">
+                    Overview
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <form class="shrink md:w-[516px] w-full relative">
+                    <div class="relative">
+                        <input type="text" name="" id="" class="input-field !outline-none !border-none italic pl-10 pr-10 ring-indigo-200
+                focus:ring-2 transition-all duration-300 w-full" placeholder="Search name">
+                        <img src="<?= base_url('images/icons/search.svg'); ?>" alt="Search Icon" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400">
+                    </div>
+                </form>
+
+                <a href="#"
+                    class="flex-none w-[46px] h-[46px] bg-white rounded-full p-[11px]">
+                    <img src="<?= base_url('images/icons/filter.svg'); ?>" alt="">
+                </a>
+            </div>
+        </section> -->
+      <?= $this->renderSection('content') ?>
+      <!-- Menampilkan konten yang berubah -->
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./sidebarToggler.js"></script>
+  </body>
+</html>
