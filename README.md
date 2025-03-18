@@ -1,1 +1,1 @@
-# tailwindcss-dashboard
+# tailwindcss
